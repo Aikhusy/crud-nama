@@ -15,16 +15,17 @@
         </form>
     </div>
     <div class>
-        <form action="">
-            <input type="hidden" name="nama" id='nama'><br>
-            <input type="hidden" name="usia" id='usia'><br>
-            <button type="button" onclick="consoleLog()">Submit</button>
+        <form action="connect.php" method="post">
+            <input type="text" name="nama" id="nama"><br>
+            <input type="number" name="usia" id="usia"><br>
+            <input type="text" name="kota" id="kota"><br>
+            <button type="submit">Save</button>
         </form>
-        
     </div>
+
 </body>
 <script>
-    
+
     function consoleLog() {
         var elemen = document.getElementById('input');
         var value = elemen.value; 
@@ -51,11 +52,9 @@
     
                 var kota = data.kota;
                 console.log(kota);
-                var dataPHP = {
-                    nama: data.nama,
-                    usia: data.usia,
-                    kota: data.kota
-                };
+                document.getElementById('nama').value = data.nama;
+                document.getElementById('usia').value = data.usia;
+                document.getElementById('kota').value = data.kota;
             })
             .catch(error => {
                 console.error('Error:', error);
