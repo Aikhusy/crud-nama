@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD nama</title>
+</head>
+<body>
+
+    <div class="container">
+        <form action="" method="post">
+            <input type="text" name="nama" id="input">
+            <button type="button" onclick="consoleLog()">Submit</button>
+        </form>
+    </div>
+    
+</body>
+<script>
+    function consoleLog() {
+        var elemen = document.getElementById('input');
+        var value = elemen.value; 
+        console.log(value);
+    }
+</script>
+</html>
